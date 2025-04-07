@@ -21,23 +21,21 @@
         </div>
         <div id="bouton_connexion">
                 <?php
-                    if ($_SESSION["connexion"]==1){
+                    if ($_SESSION["connexion"]==1){#si la personne est connecter alors ca affiche un bouton pour se deconnecter 
                         echo"    
                         <form action='index.php?log=0' method='post'>
                         <input type='submit' name='connecter' value='se deconnecter'>
                         </form>";
                     }
-                    else {
+                    else {#sinon cela affiche un bouton pour se connecter 
                         echo"    
                         <form action='connexion.php' method='post'>
                             <input type='submit' name='connecter' value='se connecter'>
                         </form>";
                     }
+
                 ?>
+                
         </div>
     </header>
-    <body>
-        
-        <script src="script.js"></script>
-    </body>
     </html>
