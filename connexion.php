@@ -1,5 +1,5 @@
 <?php
-session_start();
+
 include('bdd.php');
 $_SESSION["connexion"] = 0;
 $erreur = 0;
@@ -19,7 +19,7 @@ while($resultat=$temp->fetch()){
 
     }
 }
-        
+
 ?>
 <!DOCTYPE html>
 <html lang="fr">
@@ -30,21 +30,33 @@ while($resultat=$temp->fetch()){
     <meta name="description" content="">
     <link rel="stylesheet" href="style.css">
 </head>
+
+
+</header>
 <body>
-    <?php
-        if ($_SESSION["connexion"] == 0){ #Vérifie si la personne est connectée ou non
-            echo '<form action="connexion.php" method="post">
-                <input type="text" name="pseudo" placeholder="Pseudo">
-                <input type="password" name="mdp" placeholder="Mot de passe">
-                <input type="submit" name="bouton" value="Valider">
-            </form>'; 
-            if ($erreur == 1)
-                echo'Pseudo ou mot de passe incorrect';
-        }
-        if ($_SESSION["connexion"] == 1){ #si la personne est connectée, renvoie à l'index
-            header('Location: index.php');
-        }
-    ?>
+<?php
+include("header.php");
+?>
+<div id="form_connexion">
+        <div id="couleur_form">
+            <?php
+            if ($_SESSION["connexion"] == 0){ #Vérifie si la personne est connectée ou non
+                echo '<form action="connexion.php" method="post">
+                    <div id="pseudo"><input type="text" name="pseudo" placeholder="Pseudo" required></div>
+                    <div id="mdp"><input type="password" name="mdp" placeholder="Mot de passe" required></div>
+                    <div ><input id="btn" type="submit" name="bouton" value="Valider"></div>
+                </form>'; 
+                if ($erreur == 1)
+                    echo'Pseudo ou mot de passe incorrect';
+            }
+            if ($_SESSION["connexion"] == 1){ #si la personne est connectée, renvoie à l'index
+                header('Location: index.php');
+            }
+
+            ?>
+            <p>vous n'avez pas de compte ?</p><a href="inscription.php">inscriver vous !</a> 
+        </div>
+    </div>
 <script src="script.js"></script>
 </body>
 </html>

@@ -8,6 +8,50 @@ body{
 }
 #bouton_connexion{
     float: right;
-    width: 100px;
-    height: 100px;
+
+}
+#bouton_connexion input{
+    height: 75px;
+    width: 150px;
+
+}
+#form_connexion{
+margin-top: 150px ;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    columns: 1;
+}
+
+#btn{
+    border-radius: 15px ;
+    margin-left: 50px;
+    
+}
+
+#mdp input{
+    margin: 15px 0px;
+    height: 70px;
+    width: 200px ;
+    font-size: xx-large;
+    border-radius: 150px;
+}
+#pseudo input{
+    height: 70px;
+    width: 200px ;
+    font-size: xx-large;
+    margin-top: 50px;
+    border-radius: 150px;
+}
+#couleur_form{
+    background-color: aqua;
+    height: 500px;
+    width: 370px ; 
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    columns: 1;
+    border-radius: 150px;
+    box-shadow: 0px 26px 8px 3px #DB9AFF;
+
 }
