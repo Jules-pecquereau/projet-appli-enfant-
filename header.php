@@ -1,10 +1,13 @@
 <?php
-    session_start();
-    if (isset($_REQUEST["log"])){
-        if ($_REQUEST["log"]==0){
+
+
+        if (isset($_REQUEST["log"])){
+            if ($_REQUEST["log"]==0){
             $_SESSION["connexion"]=0;
+            
         }
     }
+    
 ?>
 
 <!DOCTYPE html>

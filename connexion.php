@@ -1,5 +1,5 @@
 <?php
-
+session_start();
 include('bdd.php');
 $_SESSION["connexion"] = 0;
 $erreur = 0;
@@ -18,24 +18,24 @@ while($resultat=$temp->fetch()){
         if ($resultat["admin"] == 1){ #si l'utilisateur est un admin, le faire savoir à la session
             $_SESSION["admin"] = 1;
         }
-
+        
     }
 }
 
-?>
 
 
 
+
+
+    include("header.php");
+    ?>
 <body>
-<?php
-include("header.php");
-?>
-<br>
-
-<div id="form_connexion">
-        <div id="couleur_form">
-            <?php
-            if ($_SESSION["connexion"] == 0){ #Vérifie si la personne est connectée ou non
+    <br>
+    
+    <div id="form_connexion">
+    <div id="couleur_form">
+    <?php
+    if ($_SESSION["connexion"] == 0){ #Vérifie si la personne est connectée ou non
                 echo '<form action="connexion.php?connexion='.$_SESSION['connexion'].'" method="post">
                     <div id="pseudo"><input type="text" name="pseudo" placeholder="Pseudo" required></div>
                     <div id="mdp"><input type="password" name="mdp" placeholder="Mot de passe" required></div>
