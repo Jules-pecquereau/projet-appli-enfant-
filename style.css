@@ -2,8 +2,8 @@ body{
     margin: 0 auto;
 }
 #logo_app{
-    width: 15%;
-    height: 15%;
+    width: 300;
+    height: 300;
     float: left;
 }
 #bouton_connexion{
@@ -16,7 +16,7 @@ body{
 
 }
 #form_connexion{
-margin-top: 150px ;
+margin-top: 50px ;
     display: flex;
     align-items: center;
     flex-direction: column;
@@ -25,26 +25,36 @@ margin-top: 150px ;
 
 #btn{
     border-radius: 15px ;
-    margin-left: 50px;
-    
+    height: 70px;
+    width: 200px;
+    font-size: x-large;
+    background-color: #fa9c0b;
+    border: 1px solid #fa9c0b ;
 }
-
+#btn:hover{
+    
+    background-color:  #7c5417 ;
+}
+header{
+    width: 1920px;
+    height: 300px;
+}
 #mdp input{
     margin: 15px 0px;
     height: 70px;
     width: 200px ;
-    font-size: xx-large;
+    font-size: x-large;
     border-radius: 150px;
 }
 #pseudo input{
     height: 70px;
     width: 200px ;
-    font-size: xx-large;
-    margin-top: 50px;
+    font-size: x-large;
+    margin-top: 100px;
     border-radius: 150px;
 }
 #couleur_form{
-    background-color: aqua;
+    background-color: #34a6ab;
     height: 500px;
     width: 370px ; 
     display: flex;
@@ -52,6 +62,6 @@ margin-top: 150px ;
     flex-direction: column;
     columns: 1;
     border-radius: 150px;
-    box-shadow: 0px 26px 8px 3px #DB9AFF;
+    box-shadow: 0px 26px 8px 3px #fa9a0b8a;
 
 }
