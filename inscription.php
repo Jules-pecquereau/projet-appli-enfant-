@@ -18,8 +18,8 @@
         <input type="text" name="pseudo" placeholder="pseudo" required>
         <input type="date" name="date" required> 
         <input type="text" name="mail" placeholder="mail" required>
-        <input type="mdp" name="mdp" placeholder="Mot de passe" required>
-        <input type="mdp" name="mdp1" placeholder="Réecrire votre mot de passe" required>
+        <input type="password" name="mdp" placeholder="Mot de passe" required>
+        <input type="password" name="mdp1" placeholder="Réecrire votre mot de passe" required>
         <input type="submit" name="bouton" value="Confirmer votre inscription" required>
     </form>'
     ?>
