@@ -1,3 +1,4 @@
+
 <?php
 session_start();
 include('bdd.php');
@@ -7,32 +8,31 @@ $sql="SELECT * FROM `utilisateur`";
 $temp=$pdo->query($sql);
 while($resultat=$temp->fetch()){
     if (isset($_POST["pseudo"]) && isset($_POST["mdp"])){ #vérifie si les valeurs de l'utilisateur sont correct
-        
         if ($_POST["pseudo"] == $resultat["pseudo"] && $_POST["mdp"] == $resultat["mdp"]){
             $_SESSION["connexion"] = 1;
         }
-    }
-    else{
-        $erreur = 1 ;
-        echo "erreur";
+        else{
+            $erreur = 1 ;
+        }
         if ($resultat["admin"] == 1){ #si l'utilisateur est un admin, le faire savoir à la session
             $_SESSION["admin"] = 1;
         }
-        
+
     }
 }
-
-
-
-
-
-
-    include("header.php");
-    ?>
+        
+?>
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Connexion</title>
+    <meta name="description" content="">
+    <link rel="stylesheet" href="style.css">
+</head>
 <body>
-    <br>
-    
-    <div id="form_connexion">
+<div id="form_connexion">
     <div id="couleur_form">
     <?php
     if ($_SESSION["connexion"] == 0){ #Vérifie si la personne est connectée ou non
