@@ -1,0 +1,13 @@
+body{
+    margin: 0 auto;
+}
+#logo_app{
+    width: 15%;
+    height: 15%;
+    float: left;
+}
+#bouton_connexion{
+    float: right;
+    width: 100px;
+    height: 100px;
+}
