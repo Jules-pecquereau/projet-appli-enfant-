@@ -1,6 +1,7 @@
 body{
     margin: 0 auto;
     background-color: aqua;
+    text-align: center;
 }
 
 .logo{
@@ -21,28 +22,56 @@ body{
     display: grid;
     text-align: center;
 }
-#addition{
-    grid-row: 1;
-        grid-column: 1;
-        transition-duration: 0.5s;
+#addition input{
+
+    transition-duration: 0.5s;
 
 }
 #addition input:hover{
-    transition-duration: 0.5s;
+    
     background-color: #fa9c0b;
 }
-#soustraction{
-    grid-row: 1;
-    grid-column: 2;
+#soustraction input{
+
+    transition-duration: 0.5s;
 }
-#multiplication{
-    grid-row: 1;
-    grid-column: 3;
+#soustraction input:hover{
+    
+    background-color: #fa9c0b;
+}
+#multiplication input{
+
+    transition-duration: 0.5s;
+}
+#multiplication input:hover{
+    
+    background-color: #fa9c0b;
+}
+#division input{
+
+    transition-duration: 0.5s;
+}
+#division input:hover{
+    
+    background-color: #fa9c0b;
 }
 #division{
     grid-row: 1;
     grid-column: 4;
 }
+#multiplications{
+    grid-row: 1;
+    grid-column: 3;
+}
+#soustraction{
+    grid-row: 1;
+    grid-column: 2;
+}
+#addition{
+    grid-row: 1;
+    grid-column: 1;
+}
+
 
 #form_connexion{
 margin-top: 60px ;
@@ -77,7 +106,7 @@ header{
 }
 input{
     height: 70px;
-    width: 200px ;
+    width: 220px ;
     font-size: x-large;
     margin-top: 50px;
     border-radius: 150px;
@@ -105,7 +134,8 @@ input{
     border-radius: 150px;
     box-shadow: 0px 26px 8px 3px #fa9a0b8a;
     float: left;
-
+    grid-row: 1;
+    grid-column: 1;
 }
 #inscription_droite{
     background-color: #34a6ab;
@@ -118,10 +148,33 @@ input{
     border-radius: 150px;
     box-shadow: 0px 26px 8px 3px #fa9a0b8a;
     float: right;
+    grid-row: 2;
+    grid-column: 1;
 
 }
-
+#btn_inscri {
+    grid-row: 2;
+    grid-column: 2;
+    
+}
 #inscription{
-    height: 430px;
-    width: 50% ; 
+    width: 100%;
+    display: grid;
+    justify-items: center;
+    margin-top: 50px;
+}
+#connecter_vous{
+    grid-row: 2;
+    grid-column: 2;
+}
+#obejet_btn_inscription{
+    width: 350px;
+}
+
+h1{
+    font-size: 80px;
+}
+p{
+    font-size: large;
+    color: rgb(182, 41, 41)  ;
 }
