@@ -21,13 +21,11 @@
                     echo $nombre1." + ".$nombre2;
                     $resultat = 0;
                     $resultat = $nombre1 +$nombre2;
-                    echo '<form action="index.php" method="get">
+                    echo '<form action="index.php" method="post">
                     <input type="number" name="reponse" placeholder="Réponse">
                     <input type="hidden" name="resultat" value='.$resultat.'>
                     <input type="hidden" name="affichage" value="afficher">
                     <input type="submit" value="valider">
-
-
                     </form>';
                 }
         
