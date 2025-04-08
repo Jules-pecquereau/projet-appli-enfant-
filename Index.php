@@ -1,7 +1,14 @@
 <?php
 session_start();
-include('header.php');
 ?>
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <title>SuperMatos</title>
+        <meta charset="UTF-8">
+        <meta name="description" content="">
+        <link rel="stylesheet" href="style.css">
+    </head>
 <html>
 <body>
     <form action="index.php">
@@ -14,11 +21,16 @@ include('header.php');
     </form>
     <?php
     if (isset($_REQUEST["calcul"])){
-        if ($_REQUEST["calcul"] == 'Addition'){
-            include ("addition.php");   
+        $_SESSION["calcul"] = $_REQUEST["calcul"];
+    }
+    
+    if (isset($_SESSION["calcul"])){
+        if ($_SESSION["calcul"] == 'Addition'){
+            include ("addition.php"); 
         }
     }
-    ?>
 
+    ?>
+ <a href="connexion.php">kaka</a>
 </body>
 </html>
