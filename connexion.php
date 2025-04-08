@@ -20,23 +20,15 @@ while($resultat=$temp->fetch()){
 
     }
 }
-        
+    include("header.php")
 ?>
-<!DOCTYPE html>
-<html lang="fr">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Connexion</title>
-    <meta name="description" content="">
-    <link rel="stylesheet" href="style.css">
-</head>
+
 <body>
 <div id="form_connexion">
     <div id="couleur_form">
     <?php
     if ($_SESSION["connexion"] == 0){ #Vérifie si la personne est connectée ou non
-                echo '<form action="connexion.php?connexion='.$_SESSION['connexion'].'" method="post">
+                echo '<form action="connexion.php" method="post">
                     <div id="pseudo"><input type="text" name="pseudo" placeholder="Pseudo" required></div>
                     <div id="mdp"><input type="password" name="mdp" placeholder="Mot de passe" required></div>
                     <div ><input id="btn" type="submit" name="bouton" value="Valider"></div>

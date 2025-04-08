@@ -2,8 +2,8 @@ body{
     margin: 0 auto;
 }
 #logo_app{
-    width: 300;
-    height: 300;
+    width: 300px;
+    height: 300px;
     float: left;
 }
 #bouton_connexion{
@@ -16,7 +16,7 @@ body{
 
 }
 #form_connexion{
-margin-top: 50px ;
+margin-top: 60px ;
     display: flex;
     align-items: center;
     flex-direction: column;
@@ -36,7 +36,7 @@ margin-top: 50px ;
     background-color:  #7c5417 ;
 }
 header{
-    width: 1920px;
+    width: 100%;
     height: 300px;
 }
 #mdp input{
@@ -46,11 +46,11 @@ header{
     font-size: x-large;
     border-radius: 150px;
 }
-#pseudo input{
+input{
     height: 70px;
     width: 200px ;
     font-size: x-large;
-    margin-top: 100px;
+    margin-top: 50px;
     border-radius: 150px;
 }
 #couleur_form{
@@ -64,4 +64,35 @@ header{
     border-radius: 150px;
     box-shadow: 0px 26px 8px 3px #fa9a0b8a;
 
+}
+#inscription_gauche{
+    background-color: #34a6ab;
+    height: 550px;
+    width: 370px ; 
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    columns: 1;
+    border-radius: 150px;
+    box-shadow: 0px 26px 8px 3px #fa9a0b8a;
+    float: left;
+
+}
+#inscription_droite{
+    background-color: #34a6ab;
+    height: 430px;
+    width: 370px ; 
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    columns: 1;
+    border-radius: 150px;
+    box-shadow: 0px 26px 8px 3px #fa9a0b8a;
+    float: right;
+
+}
+
+#inscription{
+    height: 430px;
+    width: 50% ; 
 }
