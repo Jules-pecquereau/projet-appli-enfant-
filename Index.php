@@ -26,11 +26,24 @@ session_start();
     
     if (isset($_SESSION["calcul"])){
         if ($_SESSION["calcul"] == 'Addition'){
-            include ("addition.php"); 
+            if (isset($_REQUEST["calcul"])){
+                if ($_REQUEST["calcul"] == 'Addition')
+                echo '<form action="index.php" method = "post">
+                <input type="submit" value="facile" name="difficulte">
+                <input type="submit" value="moyen" name="difficulte">
+                <input type="submit" value="difficile" name="difficulte">
+                <input type="hidden" value="afficher" name="affichage">
+            </form>';
+            }
+            if (isset($_REQUEST["affichage"])){
+                if ($_REQUEST["affichage"] == "afficher"){
+                    include ("addition.php"); 
+                }
+            }
         }
     }
 
     ?>
- <a href="connexion.php">kaka</a>
+ <a href="connexion.php">compte de monte kaka</a>
 </body>
 </html>
