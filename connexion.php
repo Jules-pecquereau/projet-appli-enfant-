@@ -24,6 +24,7 @@ while($resultat=$temp->fetch()){
 ?>
 
 <body>
+    <h1>Connexion</h1>
 <div id="form_connexion">
     <div id="couleur_form">
     <?php
@@ -42,7 +43,7 @@ while($resultat=$temp->fetch()){
             }
 
             ?>
-            <p>vous n'avez pas de compte ?</p><a href="inscription.php">inscriver vous !</a> 
+            <p class="pascompte">vous n'avez pas de compte ? </br><a href="inscription.php">inscrivez vous !</a></p>
         </div>
     </div>
 <script src="script.js"></script>

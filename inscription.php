@@ -1,13 +1,7 @@
-
-<!DOCTYPE html>
-<html lang="fr">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Inscription</title>
-    <meta name="description" content="">
-    <link rel="stylesheet" href="style.css">
-</head>
+<?php
+session_start();
+include('header.php');
+?>
 <body>
     <h1>Inscription</h1>
     <div id="inscription">
@@ -31,7 +25,7 @@
         
     </div>
     <div id="connecter_vous">
-    <a href="connexion.php" >connecter vous maintenant</a>
+    <p><a href="connexion.php" class="connectez">Connectez vous maintenant !</a></p>
     </div>
 </form>
    </div> 

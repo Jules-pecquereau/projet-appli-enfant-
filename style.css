@@ -1,8 +1,68 @@
+.lilita-one-regular {
+    font-family: "Lilita One", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+header{
+    width: 100%;
+    height: 200px;
+    background: #4062BB;
+    box-shadow: 0px 20px 60px 5px black;
+}
+
 body{
     margin: 0 auto;
-    background-color: aqua;
-    text-align: center;
+    background-color: #59C3C3;
+    text-align: center;  
 }
+
+h1{
+    font-size: 80px;
+    font-family: "Lilita One", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+p{
+    font-size: large;
+    color: rgb(182, 41, 41)  ;
+    font-family: "Lilita One", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+input{
+    height: 70px;
+    width: 220px ;
+    font-size: x-large;
+    margin-top: 50px;
+    border-radius: 150px;
+    font-family: "Lilita One", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+a{
+    text-decoration: none;
+    color: #c9b611;
+}
+
+a:hover{
+    color: rgb(255, 197, 6);
+}
+
+.pascompte{
+    color: #000000;
+}
+
+.connectez{
+    color: #0048ff;
+}
+
+.connectez:hover{
+    color: #2b1d94;
+}
+
 
 .logo{
     width: 15%;
@@ -18,6 +78,33 @@ body{
     width: 190px;
 
 }
+
+.nav{
+    margin-top: 70px;
+
+}
+
+.nav_btn{
+    margin-right: 30px;
+    margin-left: 20px;
+    padding : 20px 30px;
+    background-color: rgb(240, 240, 240);
+    font-family: "Lilita One", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    text-decoration: none;
+    color: black;
+    font-size: x-large;
+    border: solid 2px black;
+    border-radius: 50px;
+    transition: 0.2s;
+}
+
+.nav_btn:hover{
+    background-color: #fa9c0b;
+    color: black;
+}
+
 #menu_index{
     display: grid;
     text-align: center;
@@ -77,7 +164,7 @@ body{
 margin-top: 60px ;
     display: flex;
     align-items: center;
-    flex-direction: column;
+    flex-direction: column; 
     columns: 1;
 }
 
@@ -93,26 +180,18 @@ margin-top: 60px ;
     
     background-color:  #7c5417 ;
 }
-header{
-    width: 100%;
-    height: 300px;
-}
+
 #mdp input{
     margin: 15px 0px;
     height: 70px;
     width: 200px ;
     font-size: x-large;
     border-radius: 150px;
+    
 }
-input{
-    height: 70px;
-    width: 220px ;
-    font-size: x-large;
-    margin-top: 50px;
-    border-radius: 150px;
-}
+
 #couleur_form{
-    background-color: #34a6ab;
+    background-color: #4062BB;
     height: 500px;
     width: 370px ; 
     display: flex;
@@ -120,61 +199,54 @@ input{
     flex-direction: column;
     columns: 1;
     border-radius: 150px;
-    box-shadow: 0px 26px 8px 3px #fa9a0b8a;
+    box-shadow: 0px 26px 50px 3px #52489C;
 
 }
 #inscription_gauche{
-    background-color: #34a6ab;
+    background-color: #4062BB;
     height: 550px;
     width: 370px ; 
     display: flex;
     align-items: center;
     flex-direction: column;
     columns: 1;
-    border-radius: 150px;
-    box-shadow: 0px 26px 8px 3px #fa9a0b8a;
+    border-radius: 150px 0px 110px 150px;
+    box-shadow: 12px 26px 50px 3px #52489C;
     float: left;
     grid-row: 1;
     grid-column: 1;
 }
 #inscription_droite{
-    background-color: #34a6ab;
+    background-color: #4062BB;
     height: 430px;
     width: 370px ; 
     display: flex;
     align-items: center;
     flex-direction: column;
     columns: 1;
-    border-radius: 150px;
-    box-shadow: 0px 26px 8px 3px #fa9a0b8a;
+    border-radius: 0px 150px 150px 0px;
+    box-shadow: 0px 20px 50px 10px #52489C;
     float: right;
     grid-row: 2;
     grid-column: 1;
 
 }
-#btn_inscri {
-    grid-row: 2;
-    grid-column: 2;
-    
-}
 #inscription{
+    margin-top: -20px;
     width: 100%;
-    display: grid;
+    display: block;
     justify-items: center;
-    margin-top: 50px;
 }
 #connecter_vous{
-    grid-row: 2;
-    grid-column: 2;
+    margin-left: 370px;
+    padding-bottom: 40px;
+    padding-top: 20px;
 }
 #obejet_btn_inscription{
     width: 350px;
 }
 
-h1{
-    font-size: 80px;
-}
-p{
-    font-size: large;
-    color: rgb(182, 41, 41)  ;
-}
+
+
+
+

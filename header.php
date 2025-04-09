@@ -17,13 +17,17 @@
         <meta charset="UTF-8">
         <meta name="description" content="">
         <link rel="stylesheet" href="style.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lilita+One&display=swap" rel="stylesheet">
     </head>
     <header>
         <div id="logo">
-            <img src="image/logo_SuperMatos.png" id="logo_app" alt="">
+            <a href="quizz.php"><img src="image/logo_SuperMatos.png" class="logo" alt=""></a>
         </div>
         <div id="bouton_connexion">
                 <?php
+                if (isset($_SESSION["connexion"])){
                     if ($_SESSION["connexion"]==1){#si la personne est connecter alors ca affiche un bouton pour se deconnecter 
                         echo"    
                         <form action='index.php?log=0' method='post'>
@@ -32,10 +36,12 @@
                     }
                     else {#sinon cela affiche un bouton pour se connecter 
                         echo"    
-                        <form action='connexion.php' method='post'>
-                            <input type='submit' name='connecter' value='se connecter'>
-                        </form>";
+                        <div class='nav'>
+                            <a href='connexion.php' class='nav_btn'>Se connecter</a>
+                            <a href='inscription.php' class='nav_btn'>S'inscrire</a>
+                        </div>";
                     }
+                }
 
                 ?>
                 
