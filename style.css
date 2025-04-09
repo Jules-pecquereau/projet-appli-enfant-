@@ -68,6 +68,29 @@ a:hover{
     width: 202px;
     float: left;
 }
+
+.quizz_btn{
+    float: left;
+    margin-left: 70px;
+    margin-top: 10px;
+    padding : 30px 100px;
+    background-color: rgb(255, 167, 181);
+    font-family: "Lilita One", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    text-decoration: none;
+    color: black;
+    font-size: 100px;
+    border: solid 2px black;
+    border-radius: 50px;
+    transition: 0.2s;
+}
+
+.quizz_btn:hover{
+    background-color: rgb(255, 101, 127);
+    color: black;
+}
+
 #bouton_connexion{
     float: right;
 
@@ -76,7 +99,14 @@ a:hover{
 #bouton_connexion input{
     height: 75px;
     width: 190px;
+    background-color: rgb(255, 68, 68);
+    margin-right: 20px;
+    transition: 0.2s;
+}
 
+#bouton_connexion input:hover{
+    background-color: rgb(221, 21, 21);
+    cursor:pointer;
 }
 
 .nav{
@@ -88,7 +118,7 @@ a:hover{
     margin-right: 30px;
     margin-left: 20px;
     padding : 20px 30px;
-    background-color: rgb(240, 240, 240);
+    background-color: rgb(131, 253, 120);
     font-family: "Lilita One", sans-serif;
     font-weight: 400;
     font-style: normal;
@@ -101,7 +131,7 @@ a:hover{
 }
 
 .nav_btn:hover{
-    background-color: #fa9c0b;
+    background-color: rgb(50, 224, 35);
     color: black;
 }
 

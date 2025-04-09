@@ -24,8 +24,9 @@
     </head>
     <header>
         <div id="logo">
-            <a href="quizz.php"><img src="image/logo_SuperMatos.png" class="logo" alt=""></a>
+            <a href="index.php"><img src="image/logo_SuperMatos.png" class="logo" alt=""></a>
         </div>
+        <a href="quizz.php" class='quizz_btn'>Quizz !!</a>
         <div id="bouton_connexion">
                 <?php
                 if (isset($_SESSION["connexion"])){

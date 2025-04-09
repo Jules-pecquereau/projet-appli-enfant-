@@ -37,18 +37,22 @@
 
                 
                 
-                if (isset($_POST["reponse"]) && isset($_POST["resultat"])){
-                    if ($_POST["reponse"] == $_POST["resultat"]){
-                        echo "bonne reponse";
-                        $sql="UPDATE score set ".$_SESSION["calcul"]."_".$_SESSION["difficulte"]." = ".$_SESSION["calcul"]."_".$_SESSION["difficulte"]." + 1 WHERE utilisateur = ".$id."";
-                        $temp=$pdo->query($sql);
-                        while($resultat_sql=$temp->fetch()){
+                    if (isset($_POST["reponse"]) && isset($_POST["resultat"])){
+                        if ($_POST["reponse"] == $_POST["resultat"]){
+                            echo "bonne reponse";
+                            if ($_SESSION["id"] != ""){
+                                $sql="UPDATE score set ".$_SESSION["calcul"]."_".$_SESSION["difficulte"]." = ".$_SESSION["calcul"]."_".$_SESSION["difficulte"]." + 1 WHERE utilisateur = ".$_SESSION["id"]."";
+                                $temp=$pdo->query($sql);
                             
-            
+                            while($resultat_sql=$temp->fetch()){
+                                
+                
+                            }
+                            }
+                        }
+                        else{
+                            echo "mauvaise reponse";
                         }
                     }
-                    else{
-                        echo "mauvaise reponse";
-                    }
-                }
+                
             ?>
