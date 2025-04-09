@@ -12,6 +12,9 @@ if (!isset($_SESSION["id"])){
         <meta charset="UTF-8">
         <meta name="description" content="">
         <link rel="stylesheet" href="style.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lilita+One&display=swap" rel="stylesheet">
     </head>
 <html>
 <body>
@@ -33,9 +36,11 @@ if (!isset($_SESSION["id"])){
             if (isset($_REQUEST["calcul"])){
                 if ($_REQUEST["calcul"] == 'Addition')
                 echo '<form action="quizz.php" method = "post">
-                <input type="submit" value="facile" name="difficulte">
-                <input type="submit" value="moyen" name="difficulte">
-                <input type="submit" value="difficile" name="difficulte">
+                <input class="facile" type="submit" value="Facile" name="difficulte">
+                </br>
+                <input class="moyen" type="submit" value="Moyen" name="difficulte">
+                </br>
+                <input class="difficile" type="submit" value="Difficile" name="difficulte">
                 <input type="hidden" value="afficher" name="affichage">
             </form>';
             }
@@ -52,9 +57,11 @@ if (!isset($_SESSION["id"])){
             if (isset($_REQUEST["calcul"])){
                 if ($_REQUEST["calcul"] == 'Soustraction')
                 echo '<form action="quizz.php" method = "post">
-                <input type="submit" value="facile" name="difficulte">
-                <input type="submit" value="moyen" name="difficulte">
-                <input type="submit" value="difficile" name="difficulte">
+                <input class="facile" type="submit" value="Facile" name="difficulte">
+                </br>
+                <input class="moyen" type="submit" value="Moyen" name="difficulte">
+                </br>
+                <input class="difficile" type="submit" value="Difficile" name="difficulte">
                 <input type="hidden" value="afficher" name="affichage">
             </form>';
             }
@@ -71,9 +78,11 @@ if (!isset($_SESSION["id"])){
             if (isset($_REQUEST["calcul"])){
                 if ($_REQUEST["calcul"] == 'Multiplication')
                 echo '<form action="quizz.php" method = "post">
-                <input type="submit" value="facile" name="difficulte">
-                <input type="submit" value="moyen" name="difficulte">
-                <input type="submit" value="difficile" name="difficulte">
+                <input class="facile" type="submit" value="Facile" name="difficulte">
+                </br>
+                <input class="moyen" type="submit" value="Moyen" name="difficulte">
+                </br>
+                <input class="difficile" type="submit" value="Difficile" name="difficulte">
                 <input type="hidden" value="afficher" name="affichage">
             </form>';
             }
@@ -90,9 +99,11 @@ if (!isset($_SESSION["id"])){
             if (isset($_REQUEST["calcul"])){
                 if ($_REQUEST["calcul"] == 'Division')
                 echo '<form action="quizz.php" method = "post">
-                <input type="submit" value="facile" name="difficulte">
-                <input type="submit" value="moyen" name="difficulte">
-                <input type="submit" value="difficile" name="difficulte">
+                <input class="facile" type="submit" value="Facile" name="difficulte">
+                </br>
+                <input class="moyen" type="submit" value="Moyen" name="difficulte">
+                </br>
+                <input class="difficile" type="submit" value="Difficile" name="difficulte">
                 <input type="hidden" value="afficher" name="affichage">
             </form>';
             }
@@ -113,7 +124,6 @@ if (!isset($_SESSION["id"])){
         }
     }
     ?>
-
- <a href="index.php">compte de monte kaka</a>
+<a href="index.php" class='menu'>Menu principal</a>
 </body>
 </html>

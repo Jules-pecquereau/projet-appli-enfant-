@@ -6,28 +6,26 @@
             }
         
             if (isset($_SESSION["difficulte"])){
-                if ($_SESSION["difficulte"] == "facile"){
+                if ($_SESSION["difficulte"] == "Facile"){
                     $nombre1 = rand(6, 10);
                     $nombre2 = rand(1, 5);
                 }
-                if ($_SESSION["difficulte"] == "moyen"){
+                if ($_SESSION["difficulte"] == "Moyen"){
                     $nombre1 = rand(16, 20);
                     $nombre2 = rand(10, 15);
                 }
-                if ($_SESSION["difficulte"] == "difficile"){
+                if ($_SESSION["difficulte"] == "Difficile"){
                     $nombre1 = rand(60, 100);
                     $nombre2 = rand(20, 59);
                 }
-                echo $nombre1." - ".$nombre2;
+                echo "<p class='calcul'>".$nombre1." - ".$nombre2." = </p>";
                 $resultat = 0;
                 $resultat = $nombre1 - $nombre2;
-                echo '<form action="quizz.php" method="post">
-                <input type="number" name="reponse" placeholder="Réponse">
+                echo ' <form class="reponse" action="quizz.php" method="post">
+                <input class="value" type="number" name="reponse" placeholder="Réponse">
                 <input type="hidden" name="resultat" value='.$resultat.'>
                 <input type="hidden" name="affichage" value="afficher">
-                <input type="submit" value="valider">
-
-
+                <input class="valider" type="submit" value="valider">
                 </form>';
             }
     

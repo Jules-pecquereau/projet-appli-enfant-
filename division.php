@@ -6,34 +6,32 @@
             }
         
             if (isset($_SESSION["difficulte"])){
-                if ($_SESSION["difficulte"] == "facile"){
+                if ($_SESSION["difficulte"] == "Facile"){
                     $valeur = [2, 4, 6, 8, 10, 12, 14, 16, 18, 20, 22, 24, 26, 28, 30];
                     $index = array_rand($valeur);
                     $nombre1 = $valeur[$index];
                     $nombre2 = 2;
                 }
-                if ($_SESSION["difficulte"] == "moyen"){
+                if ($_SESSION["difficulte"] == "Moyen"){
                     $valeur = [6, 12, 18, 24, 30, 36, 42, 48, 54, 60, 66, 72, 78, 84, 90];
                     $index = array_rand($valeur);
                     $nombre1 = $valeur[$index];
                     $nombre2 = 6;
                 }
-                if ($_SESSION["difficulte"] == "difficile"){
+                if ($_SESSION["difficulte"] == "Difficile"){
                     $valeur = [12, 24, 36, 48, 60, 72, 84, 96, 108, 120, 132, 144, 156, 168, 180];
                     $index = array_rand($valeur);
                     $nombre1 = $valeur[$index];
                     $nombre2 = 12;
                 }
-                echo $nombre1." ÷ ".$nombre2;
+                echo "<p class='calcul'>".$nombre1." ÷ ".$nombre2." = </p>";
                 $resultat = 0;
                 $resultat = $nombre1 / $nombre2;
-                echo '<form action="quizz.php" method="post">
-                <input type="decimal" name="reponse" placeholder="Réponse">
+                echo ' <form class="reponse" action="quizz.php" method="post">
+                <input class="value" type="number" name="reponse" placeholder="Réponse">
                 <input type="hidden" name="resultat" value='.$resultat.'>
                 <input type="hidden" name="affichage" value="afficher">
-                <input type="submit" value="valider">
-
-
+                <input class="valider" type="submit" value="valider">
                 </form>';
             }
     

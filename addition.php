@@ -6,26 +6,26 @@
                 }
             
                 if (isset($_SESSION["difficulte"])){
-                    if ($_SESSION["difficulte"] == "facile"){
+                    if ($_SESSION["difficulte"] == "Facile"){
                         $nombre1 = rand(1, 10);
                         $nombre2 = rand(1, 10);
                     }
-                    if ($_SESSION["difficulte"] == "moyen"){
+                    if ($_SESSION["difficulte"] == "Moyen"){
                         $nombre1 = rand(10, 20);
                         $nombre2 = rand(10, 20);
                     }
-                    if ($_SESSION["difficulte"] == "difficile"){
+                    if ($_SESSION["difficulte"] == "Difficile"){
                         $nombre1 = rand(20, 100);
                         $nombre2 = rand(20, 100);
                     }
-                    echo $nombre1." + ".$nombre2;
+                    echo "<p class='calcul'>".$nombre1." + ".$nombre2." = </p>";
                     $resultat = 0;
                     $resultat = $nombre1 +$nombre2;
-                    echo '<form action="quizz.php" method="post">
-                    <input type="number" name="reponse" placeholder="Réponse">
+                    echo ' <form class="reponse" action="quizz.php" method="post">
+                    <input class="value" type="number" name="reponse" placeholder="Réponse">
                     <input type="hidden" name="resultat" value='.$resultat.'>
                     <input type="hidden" name="affichage" value="afficher">
-                    <input type="submit" value="valider">
+                    <input class="valider" type="submit" value="valider">
                     </form>';
                 }
         
@@ -39,7 +39,7 @@
                 
                     if (isset($_POST["reponse"]) && isset($_POST["resultat"])){
                         if ($_POST["reponse"] == $_POST["resultat"]){
-                            echo "bonne reponse";
+                            echo "<p class='statut_rep'>bonne reponse</p>";
                             if ($_SESSION["id"] != ""){
                                 $sql="UPDATE score set ".$_SESSION["calcul"]."_".$_SESSION["difficulte"]." = ".$_SESSION["calcul"]."_".$_SESSION["difficulte"]." + 1 WHERE utilisateur = ".$_SESSION["id"]."";
                                 $temp=$pdo->query($sql);
@@ -51,7 +51,7 @@
                             }
                         }
                         else{
-                            echo "mauvaise reponse";
+                            echo "<p class='statut_rep'>mauvaise reponse</p>";
                         }
                     }
                 
