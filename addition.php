@@ -21,7 +21,7 @@
                     echo $nombre1." + ".$nombre2;
                     $resultat = 0;
                     $resultat = $nombre1 +$nombre2;
-                    echo '<form action="index.php" method="post">
+                    echo '<form action="quizz.php" method="post">
                     <input type="number" name="reponse" placeholder="Réponse">
                     <input type="hidden" name="resultat" value='.$resultat.'>
                     <input type="hidden" name="affichage" value="afficher">
@@ -29,10 +29,20 @@
                     </form>';
                 }
         
-        
+                $id = $_SESSION["id"];
+                
+
+                
+                
                 if (isset($_POST["reponse"]) && isset($_POST["resultat"])){
                     if ($_POST["reponse"] == $_POST["resultat"]){
                         echo "bonne reponse";
+                        $sql="UPDATE score set ".$_SESSION["calcul"]."_".$_SESSION["difficulte"]." = ".$_SESSION["calcul"]."_".$_SESSION["difficulte"]." + 1 WHERE utilisateur = ".$id."";
+                        $temp=$pdo->query($sql);
+                        while($resultat_sql=$temp->fetch()){
+                            
+            
+                        }
                     }
                     else{
                         echo "mauvaise reponse";
