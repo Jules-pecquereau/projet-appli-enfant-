@@ -29,7 +29,10 @@
                     </form>';
                 }
         
-                $id = $_SESSION["id"];
+                if ($_SESSION["id"] != ""){
+                    $id = $_SESSION["id"];
+                }
+                
                 
 
                 

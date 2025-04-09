@@ -1,6 +1,9 @@
 <?php
 session_start();
-include("bdd.php")
+include("bdd.php");
+if (!isset($_SESSION["id"])){
+    $_SESSION["id"] = "";
+}
 ?>
 <!DOCTYPE html>
 <html lang="fr">
