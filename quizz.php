@@ -12,7 +12,7 @@ include("bdd.php")
     </head>
 <html>
 <body>
-    <form action="index.php">
+    <form action="quizz.php">
         <div id="menu_index">
             <div id="addition"><input type="submit" value="Addition" name="calcul"></div>
             <div id="soustraction"><input type="submit" value="Soustraction" name="calcul"></div>
@@ -100,15 +100,17 @@ include("bdd.php")
             }
         }
     }
-
-    $id = $_SESSION["id"];
-    $sql="SELECT * FROM score WHERE score.utilisateur = $id ;";
-$temp=$pdo->query($sql);
-while($resultat=$temp->fetch()){
-    echo $resultat["".$_SESSION["calcul"]."_".$_SESSION["difficulte"].""];
-}
+    if (isset($_SESSION["id"])){
+        if ($_SESSION["id"] != ""){
+            $sql="SELECT * FROM score WHERE score.utilisateur = ".$_SESSION["id"];
+            $temp=$pdo->query($sql);
+            while($resultat=$temp->fetch()){
+                echo $resultat["".$_SESSION["calcul"]."_".$_SESSION["difficulte"].""];
+            }
+        }
+    }
     ?>
 
- <a href="connexion.php">compte de monte kaka</a>
+ <a href="index.php">compte de monte kaka</a>
 </body>
 </html>

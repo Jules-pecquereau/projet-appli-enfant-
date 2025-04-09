@@ -1,10 +1,11 @@
 <?php
-
-
+    if (!isset($_SESSION["connexion"])){
+        $_SESSION["connexion"] = 0;
+    }
         if (isset($_REQUEST["log"])){
             if ($_REQUEST["log"]==0){
             $_SESSION["connexion"]=0;
-            
+            $_SESSION["id"]="";
         }
     }
     
@@ -35,8 +36,7 @@
                         </form>";
                     }
                     else {#sinon cela affiche un bouton pour se connecter 
-                        echo"    
-                        <div class='nav'>
+                        echo"<div class='nav'>
                             <a href='connexion.php' class='nav_btn'>Se connecter</a>
                             <a href='inscription.php' class='nav_btn'>S'inscrire</a>
                         </div>";
@@ -44,7 +44,7 @@
                 }
 
                 ?>
-                
         </div>
+
     </header>
     </html>

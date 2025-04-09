@@ -2,7 +2,6 @@
 <?php
 session_start();
 include('bdd.php');
-$_SESSION["connexion"] = 0;
 $erreur = 0;
 $sql="SELECT * FROM `utilisateur`";
 $temp=$pdo->query($sql);
@@ -10,6 +9,7 @@ while($resultat=$temp->fetch()){
     if (isset($_POST["pseudo"]) && isset($_POST["mdp"])){ #vérifie si les valeurs de l'utilisateur sont correct
         if ($_POST["pseudo"] == $resultat["pseudo"] && $_POST["mdp"] == $resultat["mdp"]){
             $_SESSION["connexion"] = 1;
+            $_SESSION["id"] = $resultat["identifiant"];
         }
         else{
             $erreur = 1 ;

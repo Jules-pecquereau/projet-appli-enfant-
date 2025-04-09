@@ -12,7 +12,7 @@ if (isset ($_POST["prenom"]) && isset ($_POST["nom"]) && isset ($_POST["pseudo"]
             echo "<p>Il faut au moins une majuscule.</p>";
         } elseif (!preg_match('/[a-z]/', $_POST["mdp"])) {
             echo "<p>Il faut au moins une minuscule.</p>";
-        } elseif (!preg_match('/[0-9]/', $_POST["mdp"])) {
+        } elseif (!preg_match('/[0-9]/', $_POST["mdp"])) {  
             echo "<p>Il faut au moins un chiffre.</p>";
         } else {
             if ($_POST["mdp"] != $_POST["mdp1"]){
