@@ -19,12 +19,12 @@
         <meta name="description" content="">
         <link rel="stylesheet" href="style.css">
         <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Lilita+One&display=swap" rel="stylesheet">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Lilita+One&display=swap" rel="stylesheet">
     </head>
     <header>
         <div id="logo">
-            <a href="index.php"><img src="image/logo_SuperMatos.png" class="logo" alt=""></a>
+            <a href="index.php"><img src="image/logo_SuperMatos.png" class="logo" alt="Logo" title="Logo"></a>
         </div>
         <a href="quizz.php" class='quizz_btn'>Quizz !!</a>
         <div id="bouton_connexion">

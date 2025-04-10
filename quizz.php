@@ -13,8 +13,8 @@ if (!isset($_SESSION["id"])){
         <meta name="description" content="">
         <link rel="stylesheet" href="style.css">
         <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Lilita+One&display=swap" rel="stylesheet">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Lilita+One&display=swap" rel="stylesheet">
     </head>
 <html>
 <body>
@@ -119,7 +119,7 @@ if (!isset($_SESSION["id"])){
             $sql="SELECT * FROM score WHERE score.utilisateur = ".$_SESSION["id"];
             $temp=$pdo->query($sql);
             while($resultat=$temp->fetch()){
-                echo $resultat["".$_SESSION["calcul"]."_".$_SESSION["difficulte"].""];
+                echo "<p class='score'>Score totale : ".$resultat["".$_SESSION["calcul"]."_".$_SESSION["difficulte"].""]."</p>";
             }
         }
     }

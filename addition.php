@@ -1,6 +1,4 @@
             <?php           
-          
-
                 if (isset($_REQUEST["difficulte"])){
                     $_SESSION["difficulte"] = $_REQUEST["difficulte"];
                 }
@@ -18,7 +16,7 @@
                         $nombre1 = rand(20, 100);
                         $nombre2 = rand(20, 100);
                     }
-                    echo "<p class='calcul'>".$nombre1." + ".$nombre2." = </p>";
+                    echo "<div id='mere_calcul'><p class='calcul'>".$nombre1." + ".$nombre2." = </p></div>";
                     $resultat = 0;
                     $resultat = $nombre1 +$nombre2;
                     echo ' <form class="reponse" action="quizz.php" method="post">
