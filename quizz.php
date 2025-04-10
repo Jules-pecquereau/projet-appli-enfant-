@@ -124,6 +124,12 @@ if (!isset($_SESSION["id"])){
         }
     }
     ?>
+<div id="index_calulette">
+    <img src="image/calculette_qui_parle_pas.png" id="img_qui_change" alt="">
+    <p id="message" class="bulle"></p>  
+    <script src="js/script.js"></script>
+</div>
 <a href="index.php" class='menu'>Menu principal</a>
+<script src="js/script.js"></script>
 </body>
 </html>
