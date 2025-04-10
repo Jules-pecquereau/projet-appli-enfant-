@@ -35,7 +35,7 @@ while($resultat=$temp->fetch()){
                     <div ><input id="btn" type="submit" name="bouton" value="Valider"></div>
                 </form>'; 
                 if ($erreur == 1)
-                    echo'Pseudo ou mot de passe incorrect';
+                    echo'<p>Pseudo ou mot de passe incorrect</p>';
             }
             if ($_SESSION["connexion"] == 1){ #si la personne est connectée, renvoie à l'index
                 header('Location: index.php');
