@@ -133,11 +133,7 @@ a:hover{
     border-radius: 50px;
     transition: 0.2s;
 }
-#img_qui_change{
-    float: left;
-    height: 700px;
-    z-index: -1;
-}
+
 
 .nav_btn:hover{
     background-color: rgb(50, 224, 35);
@@ -382,7 +378,7 @@ margin-top: 60px ;
 
 #index_calulette{
     position: absolute;
-    width:  400px;
+    width:  70%;
 }
 
 .bulle{
@@ -390,16 +386,21 @@ margin-top: 60px ;
     overflow: hidden;
     left: 530px;
     bottom: 650px;
-    height: 200px;
-    width:420px;
+    width:30%;
     padding-top: 50px;
     text-align: center;
-    border-radius: 163px 124px 185px 0px;
-    -webkit-border-radius: 163px 124px 185px 0px;
+    border-radius: 16px 12px 0px 0px;
+    -webkit-border-radius: 140px 124px 60px 0px;
     -moz-border-radius: 163px 124px 185px 0px;
     background-color: #ffffff;
     border: 4px solid #000000;
     z-index: 2;
     color: #df9322;
     font-size: 50px;
+}
+
+#img_qui_change{
+    float: left;
+    width: 70%;
+    z-index: -1;
 }
