@@ -52,5 +52,13 @@
                             echo "<p class='statut_rep'>mauvaise reponse</p>";
                         }
                     }
-                
+                    if(!isset($_REQUEST['difficulte'])){
+                        echo'
+                        <div id="index_calulette">
+                        <img src="image/calculette_qui_parle_pas.png" id="img_qui_change" alt="">
+                        <p id="message" class="bulle"></p>  
+                        </div>
+                        <p style="display:none;" id="message_calc"> Super maintenant prépare toi pour '.$_REQUEST['difficulte'].'</p>
+                        <script src="js/script.js"></script>';
+                    }
             ?>
