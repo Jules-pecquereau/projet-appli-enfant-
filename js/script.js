@@ -1,5 +1,5 @@
 let x=0;
-let message =" Bienvenue dans le Monde des Maths !!!!!!!";
+let message = document.getElementById("message_calc").innerHTML;
 let audio =new Audio("son/parle.mp3");
 message_dalay(x,message);
 function message_dalay(x , message){
@@ -22,4 +22,4 @@ function message_dalay(x , message){
 
     }
 }
-.
+

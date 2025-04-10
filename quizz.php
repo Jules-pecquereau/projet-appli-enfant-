@@ -124,12 +124,19 @@ if (!isset($_SESSION["id"])){
         }
     }
     ?>
-<div id="index_calulette">
-    <img src="image/calculette_qui_parle_pas.png" id="img_qui_change" alt="">
-    <p id="message" class="bulle"></p>  
+    <?php
+    if(!isset($_GET['calcul'])){
+    echo'
+    <div id="index_calulette">
+        <img src="image/calculette_qui_parle_pas.png" id="img_qui_change" alt="">
+        <p id="message" class="bulle"></p>  
+
+    </div>
+    <p style="display:none;" id="message_calc"> Choisi maintenant ton type de calcul</p>
     <script src="js/script.js"></script>
-</div>
-<a href="index.php" class='menu'>Menu principal</a>
-<script src="js/script.js"></script>
+    <script src="js/script.js"></script>';
+}
+?>
+<a href="index.php" class="menu">Menu principal</a>
 </body>
 </html>
