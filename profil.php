@@ -19,9 +19,11 @@ while($resultat=$temp->fetch()){
 }
 $score_totale=$score_addition+$score_soustraction+$score_Multiplication+$score_Division;
 
-echo "<p>Score total : ".$score_totale."</p>";
-echo "<p>Score total des additions : ".$score_addition."</p><p> Score total des soustractions : ".$score_soustraction."</p>";
-echo "<p>Score total des multiplications : ".$score_Multiplication."<p>Score total des divisions : ".$score_Division."</p>";
+echo "<div class='container'><div class='score'><strong>Score total : ".$score_totale."</strong></div>";
+echo "<div class='score'>Score total des additions : ".$score_addition."</div>";
+echo "<div class='score'> Score total des soustractions : ".$score_soustraction."</div>";
+echo "<div class='score'>Score total des multiplications : ".$score_Multiplication."</div>";
+echo "<div class='score'>Score total des divisions : ".$score_Division."</div></div>";
 
 ?>
 

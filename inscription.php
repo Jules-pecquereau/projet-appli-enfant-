@@ -13,7 +13,7 @@ include('header.php');
         <input type="date" name="date" required> 
     </div>
     <div id="inscription_droite">
-        <input type="text" name="mail" placeholder="mail" required>
+        <input type="text" name="mail" placeholder="mail d'un adulte" required>
         <input type="password" name="mdp" placeholder="Mot de passe" required>
         <input type="password" name="mdp1" placeholder="Réecrire votre mot de passe" required>
         <?php

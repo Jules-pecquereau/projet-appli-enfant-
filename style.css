@@ -94,15 +94,17 @@ a:hover{
 
 #bouton_connexion{
     float: right;
-
+    width: 800px;   
 }
 
 #bouton_connexion input{
-    height: 75px;
-    width: 190px;
+    height: 100px;
+    width: 220px;
     background-color: rgb(255, 68, 68);
     margin-right: 20px;
     transition: 0.2s;
+    font-size: 30px;
+    float: right;
 }
 
 #bouton_connexion input:hover{
@@ -120,7 +122,6 @@ a:hover{
     width: 100px;
     margin-right: 30px;
     margin-left: 20px;
-    
     padding : 30px 30px;
     background-color: rgb(131, 253, 120);
     font-family: "Lilita One", sans-serif;
@@ -140,6 +141,31 @@ a:hover{
 }
 
 .nav_btn:hover{
+    background-color: rgb(50, 224, 35);
+    color: black;
+}
+
+
+
+.statistique{
+    height: 40px;
+    width: 150px;
+    margin-top: 50px;
+    padding : 30px 30px;
+    background-color: rgb(131, 253, 120);
+    font-family: "Lilita One", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    text-decoration: none;
+    color: black;
+    font-size: 32px;
+    border: solid 2px black;
+    border-radius: 50px;
+    float: left;
+    transition: 0.2s;
+}
+
+.statistique:hover{
     background-color: rgb(50, 224, 35);
     color: black;
 }
@@ -402,4 +428,20 @@ margin-top: 60px ;
     z-index: 2;
     color: #df9322;
     font-size: 50px;
+}
+
+.score{
+    font-size: 50px;
+    font-family: "Lilita One", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    color: #8b0d0d;
+
+}
+
+.container{
+    display: flex;
+    flex-direction: column;
+    width: 900px;
+    margin: 0 auto;
 }

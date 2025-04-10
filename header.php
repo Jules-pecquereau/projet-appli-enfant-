@@ -31,9 +31,10 @@
                 <?php
                 if (isset($_SESSION["connexion"])){
                     if ($_SESSION["connexion"]==1){#si la personne est connecter alors ca affiche un bouton pour se deconnecter 
+                        echo"<a class='statistique' href='profil.php'>Statistique</a>";
                         echo"    
                         <form action='index.php?log=0' method='post'>
-                        <input type='submit' name='connecter' value='se deconnecter'>
+                        <input class='deconnexion' type='submit' name='connecter' value='Se deconnecter'>
                         </form>";
                     }
                     else {#sinon cela affiche un bouton pour se connecter 
