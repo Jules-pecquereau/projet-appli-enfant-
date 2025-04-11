@@ -26,7 +26,7 @@
         <div id="logo">
             <a href="index.php"><img src="image/logo_SuperMatos.png" class="logo" alt="Logo" title="Logo"></a>
         </div>
-        <a href="quizz.php" class='quizz_btn'>Quizz !!</a>
+        <a href="quizz.php?calcul_type=1" class='quizz_btn'>Quizz !!</a>
         <div id="bouton_connexion">
                 <?php
                 if (isset($_SESSION["connexion"])){

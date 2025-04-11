@@ -127,8 +127,7 @@ if (!isset($_SESSION["id"])){
     }
     ?>
     <?php
-    if(!isset($_GET['calcul'])){
-
+    if(!isset($_GET['calcul']) && isset($_SESSION["difficulte"]) && isset($_REQUEST["calcul_type"])){
             echo'
             <div id="index_calulette">
             <img src="image/calculette_qui_parle_pas.png" id="img_qui_change" alt="">
@@ -136,10 +135,45 @@ if (!isset($_SESSION["id"])){
 
             </div>
             <p style="display:none;" id="message_calc"> Choisi maintenant ton type de calcul</p>
-            <script src="js/script.js"></script>
-            <script src="js/script.js"></script>';
+            <script src="js/script.js"></script>';        
+    }
+
+    if(isset($_GET['calcul'])){
+        echo'
+        <div id="index_calulette">
+        <img src="image/calculette_qui_parle_pas.png" id="img_qui_change" alt="">
+        <p id="message" class="bulle"></p>  
+
+        </div>
+        <p style="display:none;" id="message_calc"> Choisi maintenant ta difficultée</p>
+        <script src="js/script.js"></script>';
+
         
 }
+
+if(isset($_SESSION['difficulte']) && !isset($_GET["calcul"]) && isset($_POST{"resultat"})){
+    echo' 
+    <div id="index_calulette">
+    <img src="image/calculette_qui_parle_pas.png" id="img_qui_change" alt="">
+    <p id="message" class="bulle"></p>  
+    </div>'; 
+    if (isset($_POST["reponse"]) && isset($_POST["resultat"])){
+        if ($_POST["reponse"] == $_POST["resultat"]){
+            echo "<p style='display:none;' id='message_calc'> Bonne réponse bien joué</p>";}
+        else{
+            echo "<p style='display:none;' id='message_calc'> Tu as faux, la réponse était ".$_POST["resultat"]."</p>";}
+        }  
+        echo'<script src="js/script.js"></script>';
+}
+
+
+    
+
+        
+
+
+
+
 
 ?>
 <a href="index.php" class="menu">Menu principal</a>

@@ -18,11 +18,11 @@
                     $nombre1 = rand(60, 100);
                     $nombre2 = rand(20, 59);
                 }
-                echo "<p class='calcul'>".$nombre1." - ".$nombre2." = </p>";
+                echo "<div id='mere_calcul'><p class='calcul'>".$nombre1." - ".$nombre2." = </p></div>";
                 $resultat = 0;
                 $resultat = $nombre1 - $nombre2;
                 echo ' <form class="reponse" action="quizz.php" method="post">
-                <input class="value" type="number" name="reponse" placeholder="Réponse">
+                <input class="value" type="number" name="reponse" placeholder="Réponse" required>
                 <input type="hidden" name="resultat" value='.$resultat.'>
                 <input type="hidden" name="affichage" value="afficher">
                 <input class="valider" type="submit" value="valider">
@@ -32,7 +32,6 @@
             $id = $_SESSION["id"];
             if (isset($_POST["reponse"]) && isset($_POST["resultat"])){
                 if ($_POST["reponse"] == $_POST["resultat"]){
-                        echo "bonne reponse";
                         if ($_SESSION["id"] != ""){
                             $sql="UPDATE score set ".$_SESSION["calcul"]."_".$_SESSION["difficulte"]." = ".$_SESSION["calcul"]."_".$_SESSION["difficulte"]." + 1 WHERE utilisateur = ".$id."";
                             $temp=$pdo->query($sql);
@@ -42,8 +41,6 @@
                         }
                 }
             }
-                else{
-                    echo "mauvaise reponse";
-                }
+
             }
         ?>
