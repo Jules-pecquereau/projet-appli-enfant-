@@ -164,15 +164,23 @@ if(isset($_SESSION['difficulte']) && !isset($_GET["calcul"]) && isset($_POST{"re
     if (isset($_POST["reponse"]) && isset($_POST["resultat"])){
         if ($_POST["reponse"] == $_POST["resultat"]){
             echo "<p style='display:none;' id='message_calc'> Bonne réponse bien joué !!! </p>";}
-        else{
-            
-            
+            if ($_SESSION["id"] != ""){
+                $chaine_augmente="UPDATE score SET chaine = chaine + 1 WHERE utilisateur = ".$_SESSION["id"];
+                $pdo->exec($chaine_augmente);
+            }
+        if ($_POST["reponse"] != $_POST["resultat"]){  
             echo "<p style='display:none;' id='message_calc'> Tu as faux, la réponse de ".$_POST['nombre1']." ".$_POST['signe']." ".$_POST['nombre2']." était ".$_POST["resultat"]."</p>";
             if ($_SESSION["id"] != ""){
                 $sql="UPDATE score SET erreur = erreur + 1 WHERE utilisateur = ".$id;
                 $pdo->exec($sql);
-            }}
-        }  
+                if ($_SESSION["id"] != ""){
+                    $chaine_reset="UPDATE score SET chaine = 0 WHERE utilisateur = ".$_SESSION["id"];
+                    $pdo->exec($chaine_reset);
+                }
+            }
+        }
+
+    }  
         echo'<script src="js/script.js"></script>';
 }
 
@@ -181,13 +189,14 @@ if (isset($_REQUEST["sans_parler"])){
 
 }
 
-
-    
-
-        
-
-
-
+if(isset($_SESSION['difficulte']) && !isset($_GET["calcul"])){
+    if ($_SESSION["id"] != ""){
+        $sql = "SELECT chaine FROM score WHERE utilisateur=".$_SESSION["id"];
+        $temp=$pdo->query($sql);
+        $affichage=$temp->fetch();
+        echo "<p class='streack'>".$affichage['chaine']." bonnes réponses d'affilées</p></br>";
+    }
+}
 
 
 ?>

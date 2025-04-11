@@ -33,9 +33,9 @@ p{
 }
 
 input{
-    height: 70px;
-    width: 220px ;
-    font-size: x-large;
+    height: 100px;
+    width: 300px ;
+    font-size: 40px;
     margin-top: 50px;
     border-radius: 150px;
     font-family: "Lilita One", sans-serif;
@@ -177,6 +177,7 @@ a:hover{
 
 
 #addition input{
+
     font-family: "Lilita One", sans-serif;
     font-weight: 400;
     font-style: normal;
@@ -316,10 +317,12 @@ margin-top: 60px ;
 }
 
 .menu{
+    width: 300px;
+    height: 50px;
     font-family: "Lilita One", sans-serif;
     font-weight: 400;
     font-style: normal;
-    font-size: 25px;
+    font-size: 40px;
     color: black;
     padding: 20px 30px;
     background: rgb(88, 85, 255);
@@ -460,4 +463,16 @@ margin-top: 60px ;
     width: 50%;
     margin: 0 auto;
     float: left;
+}
+
+.streack{
+    float: right;
+    margin-right: 20px;
+    font-size: 40px;
+    padding: 30px 40px;
+    background: rgb(19, 18, 107);
+    color: rgb(221, 49, 49);
+    border-radius: 50px;
+    border: solid black 4px;
+    
 }

@@ -41,7 +41,6 @@
             $id = $_SESSION["id"];    
             if (isset($_POST["reponse"]) && isset($_POST["resultat"])){
                 if ($_POST["reponse"] == $_POST["resultat"]){
-                    echo"non";
                     if ($_SESSION["id"] != ""){
                         $sql="UPDATE score SET ".$_SESSION["calcul"]."_".$_SESSION["difficulte"]." = ".$_SESSION["calcul"]."_".$_SESSION["difficulte"]." + 1 WHERE utilisateur = ".$id;
                         $pdo->exec($sql);                  
