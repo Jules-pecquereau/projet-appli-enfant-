@@ -114,20 +114,20 @@ if (!isset($_SESSION["id"])){
             }
         }
     }
-    if(isset($_SESSION["difficulte"])){
-        if (isset($_SESSION["id"])){
-            if ($_SESSION["id"] != ""){
-                $sql="SELECT * FROM score WHERE score.utilisateur = ".$_SESSION["id"];
-                $temp=$pdo->query($sql);
-                while($resultat=$temp->fetch()){
-                    echo "<p class='score'>Score totale : ".$resultat["".$_SESSION["calcul"]."_".$_SESSION["difficulte"].""]."</p>";
-                }
-            }
-        }
-    }
+        // if(isset($_SESSION["difficulte"])){
+        //     if (isset($_SESSION["id"])){
+        //         if ($_SESSION["id"] != ""){
+        //             $sql="SELECT * FROM score WHERE score.utilisateur = ".$_SESSION["id"];
+        //             $temp=$pdo->query($sql);
+        //             while($resultat=$temp->fetch()){
+        //                 echo "<p class='score'>Score totale : ".$resultat["".$_SESSION["calcul"]."_".$_SESSION["difficulte"].""]."</p>";
+        //             }
+        //         }
+        //     }
+        // }
     ?>
     <?php
-    if(!isset($_GET['calcul']) && isset($_SESSION["difficulte"]) && isset($_REQUEST["calcul_type"])){
+    if(!isset($_GET['calcul']) && isset($_REQUEST["calcul_type"])){
             echo'
             <div id="index_calulette">
             <img src="image/calculette_qui_parle_pas.png" id="img_qui_change" alt="">
