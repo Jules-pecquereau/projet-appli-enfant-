@@ -38,14 +38,16 @@
             $id = $_SESSION["id"];    
             if (isset($_POST["reponse"]) && isset($_POST["resultat"])){
                 if ($_POST["reponse"] == $_POST["resultat"]){
+                    echo"non";
                     if ($_SESSION["id"] != ""){
-                        $sql="UPDATE score set ".$_SESSION["calcul"]."_".$_SESSION["difficulte"]." = ".$_SESSION["calcul"]."_".$_SESSION["difficulte"]." + 1 WHERE utilisateur = ".$id."";
-                        $temp=$pdo->query($sql);
-                        while($resultat_sql=$temp->fetch()){
-                        
-        
+                        $sql="UPDATE score SET ".$_SESSION["calcul"]."_".$_SESSION["difficulte"]." = ".$_SESSION["calcul"]."_".$_SESSION["difficulte"]." + 1 WHERE utilisateur = ".$id;
+                        $pdo->exec($sql);                  
                     }
+                
                 }
-            }
+                if($_POST["reponse"] != $_POST["resultat"]) {
+                    echo "oui";
+              
+                }
             }
         ?>

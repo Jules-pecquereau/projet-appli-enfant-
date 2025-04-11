@@ -118,20 +118,20 @@ if (!isset($_SESSION["id"])){
             }
         }
     }
-    if(isset($_SESSION["difficulte"])){
-        if (isset($_SESSION["id"])){
-            if ($_SESSION["id"] != ""){
-                $sql="SELECT * FROM score WHERE score.utilisateur = ".$_SESSION["id"];
-                $temp=$pdo->query($sql);
-                while($resultat=$temp->fetch()){
-                    echo "<p class='score'>Score totale : ".$resultat["".$_SESSION["calcul"]."_".$_SESSION["difficulte"].""]."</p>";
-                }
-            }
-        }
-    }
+        // if(isset($_SESSION["difficulte"])){
+        //     if (isset($_SESSION["id"])){
+        //         if ($_SESSION["id"] != ""){
+        //             $sql="SELECT * FROM score WHERE score.utilisateur = ".$_SESSION["id"];
+        //             $temp=$pdo->query($sql);
+        //             while($resultat=$temp->fetch()){
+        //                 echo "<p class='score'>Score totale : ".$resultat["".$_SESSION["calcul"]."_".$_SESSION["difficulte"].""]."</p>";
+        //             }
+        //         }
+        //     }
+        // }
     ?>
     <?php
-    if(!isset($_GET['calcul']) && isset($_SESSION["difficulte"]) && isset($_REQUEST["calcul_type"])){
+    if(!isset($_GET['calcul']) && isset($_REQUEST["calcul_type"])){
             echo'
             <div id="index_calulette">
             <img src="image/calculette_qui_parle_pas.png" id="img_qui_change" alt="">
@@ -165,7 +165,11 @@ if(isset($_SESSION['difficulte']) && !isset($_GET["calcul"]) && isset($_POST{"re
         if ($_POST["reponse"] == $_POST["resultat"]){
             echo "<p style='display:none;' id='message_calc'> Bonne réponse bien joué</p>";}
         else{
-            echo "<p style='display:none;' id='message_calc'> Tu as faux, la réponse était ".$_POST["resultat"]."</p>";}
+            echo "<p style='display:none;' id='message_calc'> Tu as faux, la réponse était ".$_POST["resultat"]."</p>";
+            if ($_SESSION["id"] != ""){
+                $sql="UPDATE score SET erreur = erreur + 1 WHERE utilisateur = ".$id;
+                $pdo->exec($sql);
+            }}
         }  
         echo'<script src="js/script.js"></script>';
 }
