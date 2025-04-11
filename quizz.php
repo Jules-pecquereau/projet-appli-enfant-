@@ -149,7 +149,7 @@ if (!isset($_SESSION["id"])){
             <p id="message" class="bulle"></p>  
 
             </div>
-            <p style="display:none;" id="message_calc"> Tu a choisis '.$_GET['calcul'].' Choisis ta difficulté</p>
+            <p style="display:none;" id="message_calc"> Tu a choisis '.$_GET['calcul'].', choisis ta difficulté</p>
             <script src="js/script.js"></script>';   
 
         
@@ -163,7 +163,7 @@ if(isset($_SESSION['difficulte']) && !isset($_GET["calcul"]) && isset($_POST{"re
     </div>'; 
     if (isset($_POST["reponse"]) && isset($_POST["resultat"])){
         if ($_POST["reponse"] == $_POST["resultat"]){
-            echo "<p style='display:none;' id='message_calc'> Bonne réponse bien joué</p>";}
+            echo "<p style='display:none;' id='message_calc'> Bonne réponse bien joué !!! </p>";}
         else{
             
             

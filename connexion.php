@@ -25,7 +25,14 @@ while($resultat=$temp->fetch()){
 
 <body>
 <div id="index_calulette">
-        <img src="image/calculette_qui_parle_pas.png" id="img_qui_change" alt="">
+        <?php
+        if ($erreur == 1){
+            echo '<img src="image/choquebarre.png" id="img_qui_change" alt="">';
+        }
+        else{
+            echo '<img src="image/calculette_qui_parle_pas.png" id="img_qui_change" alt="">';
+        }
+        ?>
         </div>
         <script src="js/script.js"></script>
     <h1>Connexion</h1>

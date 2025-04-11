@@ -23,7 +23,7 @@ if($erreur!=0){
     $pourcentage_reussite = $score_totale*100/($score_totale+$erreur);
 }
 else if($erreur==0 && $score_totale == 0 ){
-    $pourcentage_reussite=100;
+    $pourcentage_reussite=0;
 }
 else{
     $pourcentage_reussite=100;
