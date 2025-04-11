@@ -26,6 +26,10 @@ if (isset ($_POST["prenom"]) && isset ($_POST["nom"]) && isset ($_POST["pseudo"]
 
             $sql2 = "INSERT INTO score (utilisateur) VALUES ('".$id."')";
             $pdo->exec($sql2);
+            
+            header('Location: index.php');
+            $_SESSION['connexion'] = 1;
+            $_SESSION["id"] = $id;
         }
     }
 }

@@ -5,10 +5,6 @@ include('header.php');
 <body>
     <h1>Inscription</h1>
     <div id="inscription">
-        <!-- <div id="index_calulette">
-            <img src="image/calculette_qui_parle_pas.png" id="img_qui_change" alt="">
-            </div>
-            <script src="js/script.js"></script> -->
     <form action="inscription.php" method="post">
     <div id="inscription_gauche">
         <input type="text" name="prenom" placeholder="Prénom" required>

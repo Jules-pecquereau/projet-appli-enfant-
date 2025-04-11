@@ -25,9 +25,7 @@ while($resultat=$temp->fetch()){
 
 <body>
 <div id="index_calulette">
-
-        <img src="image/calculette_qui_parle_pas.png" id="img_qui_change" alt="">   
-
+        <img src="image/calculette_qui_parle_pas.png" id="img_qui_change" alt="">
         </div>
         <script src="js/script.js"></script>
     <h1>Connexion</h1>
