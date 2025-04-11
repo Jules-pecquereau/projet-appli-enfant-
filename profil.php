@@ -19,8 +19,15 @@ while($resultat=$temp->fetch()){
 
 }
 $score_totale=$score_addition+$score_soustraction+$score_Multiplication+$score_Division;
-$pourcentage_reussite = $score_totale*100/($score_totale+$erreur);
-
+if($erreur!=0){
+    $pourcentage_reussite = $score_totale*100/($score_totale+$erreur);
+}
+else if($erreur==0 && $score_totale == 0 ){
+    $pourcentage_reussite=100;
+}
+else{
+    $pourcentage_reussite=100;
+}
 echo "<div class='container2'><div class='score2'>Score total : <strong>".$score_totale."</strong></div>";
 echo "<div class='score2'>Nombre d'erreur totales : <strong>$erreur</strong></div>";
 echo "<div class='score2'>Pourcentage de réussite :<strong> ".round($pourcentage_reussite)." %</strong></div></div>";

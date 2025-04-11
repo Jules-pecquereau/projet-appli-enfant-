@@ -24,11 +24,14 @@
                 echo ' <form class="reponse" action="quizz.php" method="post">
                 <input class="value" type="number" name="reponse" placeholder="Réponse" required>
                 <input type="hidden" name="resultat" value='.$resultat.'>
+                <input type="hidden" name="nombre1" value='.$nombre1.'>
+                <input type="hidden" name="nombre2" value='.$nombre2.'>
+                <input type="hidden" name="signe" value="-">
                 <input type="hidden" name="affichage" value="afficher">
                 <input class="valider" type="submit" value="valider">
                 </form>';
             }
-    
+            
             $id = $_SESSION["id"];
             if (isset($_POST["reponse"]) && isset($_POST["resultat"])){
                 if ($_POST["reponse"] == $_POST["resultat"]){

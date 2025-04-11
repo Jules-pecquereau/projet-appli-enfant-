@@ -149,7 +149,7 @@ if (!isset($_SESSION["id"])){
             <p id="message" class="bulle"></p>  
 
             </div>
-            <p style="display:none;" id="message_calc"> Choisi maintenant ton type de calcul</p>
+            <p style="display:none;" id="message_calc"> Tu a choisis '.$_GET['calcul'].' Choisis ta difficulté</p>
             <script src="js/script.js"></script>';   
 
         
@@ -165,7 +165,9 @@ if(isset($_SESSION['difficulte']) && !isset($_GET["calcul"]) && isset($_POST{"re
         if ($_POST["reponse"] == $_POST["resultat"]){
             echo "<p style='display:none;' id='message_calc'> Bonne réponse bien joué</p>";}
         else{
-            echo "<p style='display:none;' id='message_calc'> Tu as faux, la réponse était ".$_POST["resultat"]."</p>";
+            
+            
+            echo "<p style='display:none;' id='message_calc'> Tu as faux, la réponse de ".$_POST['nombre1']." ".$_POST['signe']." ".$_POST['nombre2']." était ".$_POST["resultat"]."</p>";
             if ($_SESSION["id"] != ""){
                 $sql="UPDATE score SET erreur = erreur + 1 WHERE utilisateur = ".$id;
                 $pdo->exec($sql);
