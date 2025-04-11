@@ -35,13 +35,14 @@ if (!isset($_SESSION["id"])){
         if ($_SESSION["calcul"] == 'Addition'){
             if (isset($_REQUEST["calcul"])){
                 if ($_REQUEST["calcul"] == 'Addition')
-                echo '<form action="quizz.php" method = "post">
+                echo '<form class="form_difficulte" action="quizz.php" method = "post">
                 <input class="facile" type="submit" value="Facile" name="difficulte">
                 </br>
                 <input class="moyen" type="submit" value="Moyen" name="difficulte">
                 </br>
                 <input class="difficile" type="submit" value="Difficile" name="difficulte">
                 <input type="hidden" value="afficher" name="affichage">
+                <input type="hidden" value="1" name="sans_parler">
             </form>';
             }
             if (isset($_REQUEST["affichage"])){
@@ -63,6 +64,7 @@ if (!isset($_SESSION["id"])){
                 </br>
                 <input class="difficile" type="submit" value="Difficile" name="difficulte">
                 <input type="hidden" value="afficher" name="affichage">
+                <input type="hidden" value="1" name="sans_parler">
             </form>';
             }
             if (isset($_REQUEST["affichage"])){
@@ -84,6 +86,7 @@ if (!isset($_SESSION["id"])){
                 </br>
                 <input class="difficile" type="submit" value="Difficile" name="difficulte">
                 <input type="hidden" value="afficher" name="affichage">
+                <input type="hidden" value="1" name="sans_parler">
             </form>';
             }
             if (isset($_REQUEST["affichage"])){
@@ -105,6 +108,7 @@ if (!isset($_SESSION["id"])){
                 </br>
                 <input class="difficile" type="submit" value="Difficile" name="difficulte">
                 <input type="hidden" value="afficher" name="affichage">
+                <input type="hidden" value="1" name="sans_parler">
             </form>';
             }
             if (isset($_REQUEST["affichage"])){
@@ -140,13 +144,13 @@ if (!isset($_SESSION["id"])){
 
     if(isset($_GET['calcul'])){
         echo'
-        <div id="index_calulette">
-        <img src="image/calculette_qui_parle_pas.png" id="img_qui_change" alt="">
-        <p id="message" class="bulle"></p>  
+            <div id="index_calulette">
+            <img src="image/calculette_qui_parle_pas.png" id="img_qui_change" class="img_qui_change" alt="">
+            <p id="message" class="bulle"></p>  
 
-        </div>
-        <p style="display:none;" id="message_calc"> Choisi maintenant ta difficultée</p>
-        <script src="js/script.js"></script>';
+            </div>
+            <p style="display:none;" id="message_calc"> Choisi maintenant ton type de calcul</p>
+            <script src="js/script.js"></script>';   
 
         
 }
@@ -164,6 +168,11 @@ if(isset($_SESSION['difficulte']) && !isset($_GET["calcul"]) && isset($_POST{"re
             echo "<p style='display:none;' id='message_calc'> Tu as faux, la réponse était ".$_POST["resultat"]."</p>";}
         }  
         echo'<script src="js/script.js"></script>';
+}
+
+if (isset($_REQUEST["sans_parler"])){
+    echo '<img src="image/calculette_qui_parle_pas.png" id="img_qui_change" alt="">';
+
 }
 
 
